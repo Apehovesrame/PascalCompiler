@@ -7,10 +7,11 @@ namespace PascalCompiler
 {
     public class Lexer
     {
-        private enum State { Start, Identifier, Number, Operator, Comment, Assignment }
+        private enum State { Start, Identifier, Number, Operator, Assignment }
+
 
         private readonly string[] keywords = { "var", "begin", "end", "for", "to", "downto", "do", "integer", "shortint" };
-        private readonly char[] singleCharOps = { '+', '-', '*', '/', ';', ',', '(', ')', '.' };
+        private readonly char[] singleCharOps = { '+', '-', '*', ';', ',', '(', ')', '.' };
 
         public List<Token> Tokenize(string source, DataGridView dataGridView, TextBox txtLexErrors)
         {
@@ -42,30 +43,13 @@ namespace PascalCompiler
                             if (c == '\n') line++;
                             pos++;
                         }
-                        // Сначала проверяем: “две косые черты” = начало комментария
-                        else if (c == '/' && pos + 1 < source.Length && source[pos + 1] == '/')
-                        {
-                            // пропустить всё до конца строки
-                            while (pos < source.Length && source[pos] != '\n')
-                                pos++;
-                        }
-                        // Если одиночный символ из singleCharOps ('+', '-', '*', '/', ',', '(', ')', '.', ':')
-                        else if (Array.IndexOf(singleCharOps, c) >= 0)
-                        {
-                            // Разовые операторы “/”, “*” и др.
-                            var token = new Token(TokenType.Operator, c.ToString(), line);
-                            tokens.Add(token);
-                            dataGridView.Rows.Add(token.Type, token.Value, (int)token.GetTokenCode(), line);
-                            pos++;
-                        }
                         else if (char.IsLetter(c))
                         {
                             state = State.Identifier;
                             currentToken.Append(c);
                             pos++;
                         }
-                        else if (char.IsDigit(c)
-                              || (c == '-' && pos + 1 < source.Length && char.IsDigit(source[pos + 1])))
+                        else if (char.IsDigit(c) || (c == '-' && pos + 1 < source.Length && char.IsDigit(source[pos + 1])))
                         {
                             state = State.Number;
                             currentToken.Append(c);
@@ -77,13 +61,19 @@ namespace PascalCompiler
                             currentToken.Append(c);
                             pos++;
                         }
+                        else if (Array.IndexOf(singleCharOps, c) >= 0)
+                        {
+                            var token = new Token(TokenType.Operator, c.ToString(), line);
+                            tokens.Add(token);
+                            dataGridView.Rows.Add(token.Type, token.Value, (int)token.GetTokenCode(), line);
+                            pos++;
+                        }
                         else
                         {
                             txtLexErrors.AppendText($"Лексическая ошибка в строке {line}: Неожиданный символ '{c}'\r\n");
                             pos++;
                         }
                         break;
-
 
                     case State.Identifier:
                         if (char.IsLetterOrDigit(c))
@@ -144,11 +134,10 @@ namespace PascalCompiler
                         {
                             if (int.TryParse(currentToken.ToString(), out int num))
                             {
-                                if (num < 0 || num > 65535)
+                                if (num < -32768 || num > 65535)
                                 {
-                                    txtLexErrors.AppendText($"Лексическая ошибка в строке {line}: Константа {num} должна быть 1-байтным (0-255) или 2-байтным (0-65535).\r\n");
+                                    txtLexErrors.AppendText($"Лексическое предупреждение в строке {line}: Константа {num} выходит за пределы диапазона\r\n");
                                 }
-
                                 var token = new Token(TokenType.Number, currentToken.ToString(), line);
                                 tokens.Add(token);
                                 dataGridView.Rows.Add(token.Type, token.Value, (int)token.GetTokenCode(), line);
@@ -178,18 +167,6 @@ namespace PascalCompiler
                         }
                         currentToken.Clear();
                         state = State.Start;
-                        break;
-
-                    case State.Comment:
-                        if (c == '}')
-                        {
-                            state = State.Start;
-                            pos++;
-                        }
-                        else
-                        {
-                            pos++;
-                        }
                         break;
                 }
             }
@@ -231,7 +208,7 @@ namespace PascalCompiler
 
             if (txtLexErrors.TextLength == 0)
             {
-                txtLexErrors.AppendText("Лексический анализ завершён успешно. Ошибок не обнаружено.\r\n");
+                txtLexErrors.AppendText("Лексический анализ завершён успешно.\r\n");
             }
 
 

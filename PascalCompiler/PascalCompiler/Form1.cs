@@ -22,7 +22,7 @@ namespace PascalCompiler
             txtLexErrors.Clear();
             txtSyntaxErrors.Clear();
             txtSemanticErrors.Clear();
-            listBoxIntermediateCode.Items.Clear();
+            listBox4.Items.Clear();
 
             string sourceCode = txtSource.Text;
             if (string.IsNullOrWhiteSpace(sourceCode))
@@ -36,7 +36,7 @@ namespace PascalCompiler
             var lexer = new Lexer();
             var tokens = lexer.Tokenize(sourceCode, dgvTokens, txtLexErrors);
 
-            parser = new ParserLRPascal(tokens, txtSyntaxErrors, listBoxIntermediateCode);
+            parser = new ParserLRPascal(tokens, txtSyntaxErrors, listBox4);
 
             parser.Parse();
 

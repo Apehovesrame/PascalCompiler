@@ -40,7 +40,7 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listBoxIntermediateCode = new System.Windows.Forms.ListBox();
+            this.listBox4 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTokens)).BeginInit();
             this.SuspendLayout();
             // 
@@ -146,22 +146,22 @@
             this.columnHeader7.Text = "Результат";
             this.columnHeader7.Width = 80;
             // 
-            // listBoxIntermediateCode
+            // listBox4
             // 
-            this.listBoxIntermediateCode.FormattingEnabled = true;
-            this.listBoxIntermediateCode.Location = new System.Drawing.Point(715, 12);
-            this.listBoxIntermediateCode.Margin = new System.Windows.Forms.Padding(2);
-            this.listBoxIntermediateCode.Name = "listBoxIntermediateCode";
-            this.listBoxIntermediateCode.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.listBoxIntermediateCode.Size = new System.Drawing.Size(394, 498);
-            this.listBoxIntermediateCode.TabIndex = 14;
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.Location = new System.Drawing.Point(715, 12);
+            this.listBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.listBox4.Size = new System.Drawing.Size(419, 498);
+            this.listBox4.TabIndex = 14;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1115, 549);
-            this.Controls.Add(this.listBoxIntermediateCode);
+            this.ClientSize = new System.Drawing.Size(1145, 549);
+            this.Controls.Add(this.listBox4);
             this.Controls.Add(this.listViewQuads);
             this.Controls.Add(this.txtSemanticErrors);
             this.Controls.Add(this.txtSyntaxErrors);
@@ -192,7 +192,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ListBox listBoxIntermediateCode;
+        private System.Windows.Forms.ListBox listBox4;
     }
 }
 
