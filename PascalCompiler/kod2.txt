@@ -1,0 +1,7 @@
+var
+  x, y: integer;
+begin
+  y := 10;
+  for x := 5 downto 1 do
+    y := y - x;
+end.

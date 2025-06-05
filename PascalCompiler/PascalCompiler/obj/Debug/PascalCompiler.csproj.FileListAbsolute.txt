@@ -1,0 +1,20 @@
+C:\Users\Apehovesrame\Desktop\Новая папка (2)\PascalCompiler\PascalCompiler\bin\Debug\PascalCompiler.exe.config
+C:\Users\Apehovesrame\Desktop\Новая папка (2)\PascalCompiler\PascalCompiler\bin\Debug\PascalCompiler.exe
+C:\Users\Apehovesrame\Desktop\Новая папка (2)\PascalCompiler\PascalCompiler\bin\Debug\PascalCompiler.pdb
+C:\Users\Apehovesrame\Desktop\Новая папка (2)\PascalCompiler\PascalCompiler\obj\Debug\PascalCompiler.csproj.AssemblyReference.cache
+C:\Users\Apehovesrame\Desktop\Новая папка (2)\PascalCompiler\PascalCompiler\obj\Debug\PascalCompiler.MainForm.resources
+C:\Users\Apehovesrame\Desktop\Новая папка (2)\PascalCompiler\PascalCompiler\obj\Debug\PascalCompiler.Properties.Resources.resources
+C:\Users\Apehovesrame\Desktop\Новая папка (2)\PascalCompiler\PascalCompiler\obj\Debug\PascalCompiler.csproj.GenerateResource.cache
+C:\Users\Apehovesrame\Desktop\Новая папка (2)\PascalCompiler\PascalCompiler\obj\Debug\PascalCompiler.csproj.CoreCompileInputs.cache
+C:\Users\Apehovesrame\Desktop\Новая папка (2)\PascalCompiler\PascalCompiler\obj\Debug\PascalCompiler.exe
+C:\Users\Apehovesrame\Desktop\Новая папка (2)\PascalCompiler\PascalCompiler\obj\Debug\PascalCompiler.pdb
+C:\Users\User\Desktop\курсачсПК\PascalCompiler\PascalCompiler\bin\Debug\PascalCompiler.exe.config
+C:\Users\User\Desktop\курсачсПК\PascalCompiler\PascalCompiler\bin\Debug\PascalCompiler.exe
+C:\Users\User\Desktop\курсачсПК\PascalCompiler\PascalCompiler\bin\Debug\PascalCompiler.pdb
+C:\Users\User\Desktop\курсачсПК\PascalCompiler\PascalCompiler\obj\Debug\PascalCompiler.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\курсачсПК\PascalCompiler\PascalCompiler\obj\Debug\PascalCompiler.MainForm.resources
+C:\Users\User\Desktop\курсачсПК\PascalCompiler\PascalCompiler\obj\Debug\PascalCompiler.Properties.Resources.resources
+C:\Users\User\Desktop\курсачсПК\PascalCompiler\PascalCompiler\obj\Debug\PascalCompiler.csproj.GenerateResource.cache
+C:\Users\User\Desktop\курсачсПК\PascalCompiler\PascalCompiler\obj\Debug\PascalCompiler.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\курсачсПК\PascalCompiler\PascalCompiler\obj\Debug\PascalCompiler.exe
+C:\Users\User\Desktop\курсачсПК\PascalCompiler\PascalCompiler\obj\Debug\PascalCompiler.pdb

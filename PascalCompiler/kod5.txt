@@ -1,0 +1,14 @@
+var
+  a, b, c, i: integer;
+begin
+  a := 5;
+  c := 0;
+
+  for b := 1 to a do
+  begin
+    for i := 1 to b do
+    begin
+      c := c + 1;
+    end;
+  end;
+end.
